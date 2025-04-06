@@ -24,6 +24,19 @@ index 69a43e5..e2a7f65 100644
            </div>
          </form>
        )}
+diff --git a/src/services/apiService.js b/src/services/apiService.js
+index 71c5b6f..042314a 100644
+--- a/src/services/apiService.js
++++ b/src/services/apiService.js
+@@ -2,7 +2,7 @@
+ import axios from 'axios';
+ 
+ // Base URL for API
+-const API_BASE_URL = 'https://dev.cobaltfairy.online/api';
++const API_BASE_URL = '/api';
+ 
+ // Create axios instance with base URL
+ const apiClient = axios.create({
 diff --git a/src/services/authService.js b/src/services/authService.js
 index 1f78b2a..c8cbad2 100644
 --- a/src/services/authService.js
