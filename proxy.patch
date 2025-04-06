@@ -1,0 +1,39 @@
+diff --git a/README.md b/README.md
+index 125e18c..fb47db7 100644
+--- a/README.md
++++ b/README.md
+@@ -95,7 +95,7 @@ For development and evaluation purposes, the application includes fallback mecha
+ The application starts with a login screen. Use the following credentials to log in:
+ 
+ - Username: `dev1`
+-- Password: `12cf#$!34`
++- Password: `12cf#$!@34`
+ 
+ After successful login, you'll be able to access the data table and submit the user form.
+ 
+diff --git a/src/components/auth/LoginForm.jsx b/src/components/auth/LoginForm.jsx
+index 69a43e5..e2a7f65 100644
+--- a/src/components/auth/LoginForm.jsx
++++ b/src/components/auth/LoginForm.jsx
+@@ -59,7 +59,7 @@ const LoginForm = () => {
+           <div className="login-info">
+             <h3>Test Credentials:</h3>
+             <p>Username: dev1</p>
+-            <p>Password: 12cf#$!34</p>
++            <p>Password: 12cf#$!@34</p>
+           </div>
+         </form>
+       )}
+diff --git a/src/services/authService.js b/src/services/authService.js
+index 1f78b2a..c8cbad2 100644
+--- a/src/services/authService.js
++++ b/src/services/authService.js
+@@ -12,7 +12,7 @@ export const login = async (username, password) => {
+     // Make a direct request to the API
+     const response = await axios({
+       method: 'post',
+-      url: 'https://dev.cobaltfairy.online/api/login',
++      url: "/api/login",
+       data: {
+         username,
+         password
